@@ -1,0 +1,144 @@
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #202124;
+  background: #f5f6f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.header {
+  margin-bottom: 36px;
+  padding: 28px;
+  color: white;
+  background: #1f2937;
+  border-radius: 12px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  color: #d1d5db;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
+}
+
+.product-placeholder {
+  display: grid;
+  height: 150px;
+  place-items: center;
+  background: #e8edf5;
+  color: #374151;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-details h3 {
+  margin: 0 0 10px;
+}
+
+.description {
+  min-height: 40px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.stock {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.available {
+  color: #15803d;
+}
+
+.unavailable {
+  color: #b91c1c;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+}
+
+
+.catalogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 300px;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+  .catalogue-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
